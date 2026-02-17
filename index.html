@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gracias por tu Aporte</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    background: url('recibimostuinscripcion.png') no-repeat center center/cover;
+    position:relative;
+    padding:20px;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    top:0;
+    left:0;
+    z-index:0;
+}
+
+.container{
+    position:relative;
+    z-index:2;
+    max-width:650px;
+    width:100%;
+}
+
+.logo-top{
+    width:140px;
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(26px,5vw,40px);
+    color:#00ff88;
+    text-shadow:0 0 10px #00ff88,
+                0 0 20px #00ff88,
+                0 0 40px #00ff88;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    font-size:clamp(16px,3.5vw,22px);
+    color:white;
+    margin-bottom:30px;
+}
+
+.texto-guia{
+    font-size:clamp(15px,3.5vw,18px);
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.descripcion{
+    font-size:clamp(14px,3vw,17px);
+    line-height:1.5;
+    margin-bottom:35px;
+}
+
+.button-wrapper{
+    position:relative;
+    display:inline-block;
+    margin-bottom:35px;
+}
+
+.button-glow{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:220%;
+    height:220%;
+    background: radial-gradient(circle, rgba(0,255,100,0.7) 0%, transparent 65%);
+    transform:translate(-50%, -50%);
+    animation: glowPulse 2.2s infinite ease-in-out;
+    filter: blur(45px);
+    z-index:-1;
+}
+
+@keyframes glowPulse{
+    0%{ opacity:0.6; transform:translate(-50%, -50%) scale(0.9); }
+    50%{ opacity:1; transform:translate(-50%, -50%) scale(1.1); }
+    100%{ opacity:0.6; transform:translate(-50%, -50%) scale(0.9); }
+}
+
+.btn{
+    padding:15px 40px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:50px;
+    font-size:16px;
+    transition:0.3s ease;
+    display:inline-block;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #00ff88;
+}
+
+.vamos{
+    font-size:clamp(18px,4vw,24px);
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.logo-bottom{
+    width:90px;
+    opacity:0.9;
+}
+
+@media(max-width:480px){
+    .logo-top{
+        width:110px;
+    }
+    .btn{
+        font-size:14px;
+        padding:13px 30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <img src="logoweb.png" alt="Logo" class="logo-top">
+
+    <h1>¡GRACIAS POR TU APORTE!</h1>
+    <div class="subtitle">"Ya sos parte de esta Pasión"</div>
+
+    <div class="texto-guia">¡SOLO QUEDA EL ÚLTIMO PASO!</div>
+    <div class="descripcion">
+        Envíanos un WhatsApp y te enviaremos el link para que accedas a la comunidad de hinchas
+    </div>
+
+    <div class="button-wrapper">
+        <div class="button-glow"></div>
+        <a href="https://wa.me/TUNUMERO?text=Hola%20ya%20realicé%20el%20aporte" class="btn">
+            Enviar WhatsApp
+        </a>
+    </div>
+
+    <div class="vamos">¡VAMOS LOS PERSOS!</div>
+    <img src="logoweb.png" alt="Logo" class="logo-bottom">
+
+</div>
+
+</body>
+</html>
